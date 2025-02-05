@@ -10,7 +10,7 @@ import { timer } from 'rxjs';
 export class DadosComponent implements AfterViewInit {
   @Input() public dicesValue: string[] = ['1', '2', '3', '4', '5', '6'];
 
-  private readonly _TIME: number = 1;
+  private readonly _TIME: number = 0.5;
 
   constructor(private _renderer: Renderer2) {
 
