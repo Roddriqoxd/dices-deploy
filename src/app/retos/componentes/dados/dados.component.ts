@@ -8,7 +8,7 @@ import { timer } from 'rxjs';
   styleUrl: './dados.component.scss'
 })
 export class DadosComponent implements AfterViewInit {
-  private readonly _TIME: number = 1.5;
+  private readonly _TIME: number = 1;
 
   constructor(private _renderer: Renderer2) {
 
@@ -21,7 +21,6 @@ export class DadosComponent implements AfterViewInit {
   public rollDice(base : HTMLDivElement): void {
     this._renderer.setStyle(base, 'transition', '');
     this._renderer.setStyle(base, 'transform', 'translateY(200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)');
-    (base.children[0] as HTMLDivElement).style.background = `red`;
     timer(this._TIME * 10).subscribe(() => {
       this._renderer.setStyle(base, 'transition', `transform ${this._TIME}s`);
       const randomValue = Math.floor((Math.random() * 6) + 1);
