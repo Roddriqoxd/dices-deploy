@@ -1,10 +1,10 @@
 .container {
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   position: relative;
   perspective: 1200px;
-  top: -100px;
+  top: -413px;
 }
 
 .cube {
@@ -22,41 +22,40 @@
   justify-content: center;
   align-items: center;
   font-size: 60px;
-  background: white;
-  background-color: rgb(168, 0, 0);
-  border: white 1px solid;
+  background-color: #ac0505;
+  border: #ffffff59 1px solid;
   border-radius: 5%;
 }
 
 .front {
-  transform: translateZ(100px);
+  transform: translateZ(40px);
 }
 
 .back {
-  transform: rotateY(180deg) translateZ(100px);
+  transform: rotateY(180deg) translateZ(40px);
 }
 
 .left {
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(40px);
 }
 
 .right {
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(40px);
 }
 
 .top {
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(40px);
 }
 
 .bottom {
-  transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(40px);
 }
 
 .inside {
   display: flex;
 
   P {
-    font-size: 20px;
+    font-size: 20%;
     color: white;
   }
 }

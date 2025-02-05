@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 import { timer } from 'rxjs';
 
 @Component({
@@ -8,6 +8,8 @@ import { timer } from 'rxjs';
   styleUrl: './dados.component.scss'
 })
 export class DadosComponent implements AfterViewInit {
+  @Input() public dicesValue: string[] = ['1', '2', '3', '4', '5', '6'];
+
   private readonly _TIME: number = 1;
 
   constructor(private _renderer: Renderer2) {
