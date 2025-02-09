@@ -4,6 +4,7 @@ import { DadosComponent } from "../dados/dados.component";
 @Component({
   selector: 'app-dados-eroticos',
   imports: [DadosComponent],
+  standalone: true,
   templateUrl: './dados-eroticos.component.html',
   styleUrl: './dados-eroticos.component.scss'
 })

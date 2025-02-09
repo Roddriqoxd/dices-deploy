@@ -1,0 +1,19 @@
+  <section class="menu-container">
+    @if (!isComponentActive) {
+      <div class="menu" (click)="navigateTo()">
+        <nav>
+          <div class="dado">
+            <div class="image"></div>
+            <span>Besar</span>
+          </div>
+
+          <div class="message-container">
+            <div class="image"></div>
+            <span>Juegos de dados</span>
+          </div>
+        </nav>
+      </div>
+    }
+  <ng-container *ngComponentOutlet="component"></ng-container>
+  <!-- <app-dados-eroticos></app-dados-eroticos> -->
+</section>

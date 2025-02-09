@@ -4,6 +4,7 @@ import { timer } from 'rxjs';
 @Component({
   selector: 'app-dados',
   imports: [],
+  standalone: true,
   templateUrl: './dados.component.html',
   styleUrl: './dados.component.scss'
 })

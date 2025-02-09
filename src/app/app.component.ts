@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DadosComponent } from './retos/componentes/dados/dados.component';
-import { DadosEroticosComponent } from "./retos/componentes/dados-eroticos/dados-eroticos.component";
+import { DadosComponent } from './componentes/dados/dados.component';
+import { DadosEroticosComponent } from "./componentes/dados-eroticos/dados-eroticos.component";
+import { MenuComponent } from "./componentes/menu/menu.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DadosComponent, DadosEroticosComponent],
+  imports: [RouterOutlet, DadosComponent, DadosEroticosComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
