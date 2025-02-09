@@ -28,4 +28,11 @@ export class MenuComponent {
     this.buttonIcon = 'chevron_left';
     this.isComponentActive = true;
   }
+
+  public retroceder(): void {
+    this.component = null;
+    this.isComponentActive = false;
+    this.title = 'Lista de juegos';
+    this.buttonIcon = 'menu';
+  }
 }
