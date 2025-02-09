@@ -6,6 +6,34 @@
   flex-direction: column;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  border-bottom: #292D57 2px solid;
+
+  mat-icon {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #292D57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  span {
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+}
+
 .menu {
   display: flex;
   padding: 15px;

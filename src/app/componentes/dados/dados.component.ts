@@ -1,19 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-dados',
-  imports: [],
+  imports: [CommonModule],
   standalone: true,
   templateUrl: './dados.component.html',
   styleUrl: './dados.component.scss'
 })
 export class DadosComponent implements AfterViewInit {
+  // @ViewChild('dados',  { static: true }) public dados!: ElementRef;
+
   @Input() public dicesValue: string[] = ['1', '2', '3', '4', '5', '6'];
 
   private readonly _TIME: number = 0.5;
 
-  constructor(private _renderer: Renderer2) {
+  constructor(private _renderer: Renderer2, private _el: ElementRef) {
 
   }
 
@@ -21,7 +24,9 @@ export class DadosComponent implements AfterViewInit {
 
   }
 
-  public rollDice(base : HTMLDivElement): void {
+  public rollDice(): void {
+    // this.dados;
+    const base = this._el.nativeElement.querySelector('.cube');
     this._renderer.setStyle(base, 'transition', '');
     this._renderer.setStyle(base, 'transform', 'translateY(200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)');
     timer(this._TIME * 10).subscribe(() => {

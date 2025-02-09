@@ -1,4 +1,9 @@
   <section class="menu-container">
+    <nav class="navbar">
+      <mat-icon aria-hidden="false" [fontIcon]="buttonIcon"></mat-icon>
+        <span>{{ title }}</span>
+    </nav>
+
     @if (!isComponentActive) {
       <div class="menu" (click)="navigateTo()">
         <nav>

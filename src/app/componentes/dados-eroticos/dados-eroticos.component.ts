@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { DadosComponent } from "../dados/dados.component";
 
 @Component({
@@ -9,8 +9,15 @@ import { DadosComponent } from "../dados/dados.component";
   styleUrl: './dados-eroticos.component.scss'
 })
 export class DadosEroticosComponent {
-  public dadoUno: string[] = ["Besar", "Lamer", "Morder", "Acariciar", "Soplar", "Chupar"];
-  public dadoDos: string[] = ["Cuello", "Pecho", "Espalda", "Manos", "Pies", "Genitales"];
+  @ViewChildren(DadosComponent) dadosComponents!: QueryList<DadosComponent>;
+  public dadoUno: string[] = ["Besar", "Lamer", "Morder", "Chupar", "Explorar", "Jugar"];
+  public dadoDos: string[] = ["Cuello", "Pezones", "Comodin", "Orejas", "Culo", "Genitales"];
 
   constructor() { }
+
+
+lanzar(): void {
+  this.dadosComponents.first.rollDice();
+  this.dadosComponents.last.rollDice();
+}
 }
